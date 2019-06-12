@@ -10,16 +10,16 @@ class App extends Component {
     return (
       <>
         <header>
-          <TopNav />
+          <Router>
+            <TopNav />
+            <Switch>
+              <Route path="/" exact component={Home} />
+              <Route path="/view-user" exact component={ViewUser} />
+              <Route path="/add-user" exact component={AddUser} />
+            </Switch>
+          </Router>
         </header>
         <main />
-        <Router>
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="view-user" exact component={ViewUser} />
-            <Route path="add-user" exact component={AddUser} />
-          </Switch>
-        </Router>
       </>
     )
   }
