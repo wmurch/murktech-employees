@@ -1,5 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
+import AllData from '../components/AllData'
 
 export default function AllEmployees() {
-  return <div />
+  return (
+    <main>
+      <AllData />
+    </main>
+  )
 }

@@ -1,1 +1,3 @@
 https://sdg-staff-directory-app.herokuapp.com/api/MurkTech/employees
+
+{upload => {setEmployee(upload.target.value)}}

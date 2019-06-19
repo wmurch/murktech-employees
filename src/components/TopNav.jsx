@@ -17,6 +17,9 @@ export default function TopNav() {
           <li>
             <Link to="/view-user"> View User </Link>
           </li>
+          <li>
+            <Link to="/all_employees"> All Employees </Link>
+          </li>
         </ul>
       </div>
     </>
