@@ -1,14 +1,22 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+
+const API_URL =
+  'https://sdg-staff-directory-app.herokuapp.com/api/MurkTech/employees'
 
 export default function AddData() {
+  const [employee, setEmployee] = useState('')
+
+  useEffect(() => {
+    axios.get(API_URL).then(resp => {
+      setEmployee(resp.data)
+      console.log({ resp })
+    })
+  }, [])
+
   return (
     <>
-      <main>
-        <div className="home">
-          <h1>Add Employee</h1>
-          <p>I want to see update an Employee</p>
-        </div>
-      </main>
+      <main>{/* <form onSubmit={addEmployee} /> */}</main>
     </>
   )
 }
